@@ -17,19 +17,19 @@ const routes = [
         element: <Login />,
       },
       {
-        path: "register",
+        path: "/register",
         element: <Register/>,
       },
       {
-        path: "Login",
+        path: "/Login",
         element: <Login/>,
       },
       {
-        path: "forgot-password",
+        path: "/forgot-password",
         element: <ForgotPassword/>,
       },
       {
-        path: "home",
+        path: "/home",
         element: <Home/>,
       },
     ],
