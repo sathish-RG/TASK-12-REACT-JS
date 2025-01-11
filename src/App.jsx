@@ -11,9 +11,9 @@ const routes = [
   {
     path: "/",
     element: <Navbar />,
-    children: [
+    children:[
       {
-        path: "",
+        path: "/",
         element: <Login />,
       },
       {
@@ -21,7 +21,7 @@ const routes = [
         element: <Register/>,
       },
       {
-        path: "/Login",
+        path: "/login",
         element: <Login/>,
       },
       {
@@ -30,11 +30,11 @@ const routes = [
       },
       {
         path: "/home",
-        element: <Home/>,
-      },
-    ],
-  },
-];
+        element: <Home/>
+      }
+    ]
+  }
+]
 
 const router = createBrowserRouter(routes);
 
