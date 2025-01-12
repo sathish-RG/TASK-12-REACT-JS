@@ -48,12 +48,12 @@ const Login = () => {
           onChange={handleChange}
           className="border w-full p-2 mb-4 rounded"
         />
-        <p className="p-5 pt-0 text-blue-500"><a href="/forgot-password">Forgot Password</a></p>
+        <p className="p-5 pt-0 text-blue-500" onClick={() => window.location.href = '/forgot-password'}>Forgot Password</p>
 
-        <button className="bg-blue-500 text-white w-full py-2 rounded">
+        <button className="bg-blue-500 text-white w-full py-2 rounded" >
           Login
         </button>
-        <p className="p-5 pb-0 text-blue-500"><a href="/register">Register</a></p>
+        <p className="p-5 pb-0 text-blue-500" onClick={() => window.location.href = '/register'}>Register</p>
       </form>
     </div>
   );

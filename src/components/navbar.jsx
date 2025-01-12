@@ -5,7 +5,7 @@ const navbar = () => {
   return (
     <>
       <nav className=" bg-blue-500 flex flex-row justify-between text-white p-1">
-        <button onClick={() => ("/")} className="font-bold text-4xl pl-5">
+        <button onClick={() => window.location.href = '/'} className="font-bold text-4xl pl-5">
           Password Reset Flow
         </button>
         <div className="flex flex-row justify-around items-center align-middle gap-4 p-3 pr-10">
