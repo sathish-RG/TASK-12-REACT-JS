@@ -1,30 +1,49 @@
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
-const navbar = () => {
-
+const Navbar = () => {
   return (
     <>
-      <nav className=" bg-blue-500 flex flex-row justify-between text-white p-1">
-        <button onClick={() => window.location.href = '/'} className="font-bold text-4xl pl-5">
+      {/* Navbar */}
+      <nav className="bg-blue-500 flex flex-row justify-between text-white p-1 items-center flex-wrap">
+        {/* Logo */}
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `font-bold text-4xl pl-5  `
+          }
+        >
           Password Reset Flow
-        </button>
-        <div className="flex flex-row justify-around items-center align-middle gap-4 p-3 pr-10">
-        <button
-            onClick={() =>window.location.href = "/register"}
-            className="flex flex-row gap-1 font-bold text-xl hover:bg-blue-300 p-2 rounded-lg"
+        </NavLink>
+
+        {/* Navigation Buttons */}
+        <div className="flex flex-row justify-around items-center gap-4 p-3 pr-10">
+          {/* Register Button */}
+          <NavLink
+            to="/register"
+            className={({ isActive }) =>
+              `flex flex-row gap-1 font-bold text-xl hover:bg-blue-300 p-2 rounded-lg ${
+                isActive ? "bg-blue-700" : ""
+              }`
+            }
           >
             Register
-          </button>
-          <button
-            onClick={() =>window.location.href = "/login"}
-            className="flex flex-row gap-1 font-bold text-xl hover:bg-blue-300 p-2 rounded-lg"
+          </NavLink>
+
+          {/* Login Button */}
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              `flex flex-row gap-1 font-bold text-xl hover:bg-blue-300 p-2 rounded-lg ${
+                isActive ? "bg-blue-700" : ""
+              }`
+            }
           >
             Login
-          </button>
-          
+          </NavLink>
         </div>
-        
       </nav>
+
+      {/* Outlet for Nested Routes */}
       <main>
         <Outlet />
       </main>
@@ -32,4 +51,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
