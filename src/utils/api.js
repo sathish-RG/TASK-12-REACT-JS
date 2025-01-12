@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://task-12-node-js-3.onrender.com/"
+  baseURL: "https://task-12-node-js-3.onrender.com/api/auth/"
 });
 
 export const register = (data) => API.post("/register", data);
