@@ -60,7 +60,7 @@ const Register = () => {
         <button className="bg-blue-500 text-white w-full py-2 rounded">
           Register
         </button>
-        <p className="p-5 pb-0 text-blue-500" onClick={() => window.location.href = '/login'}>Login</p>
+        <p className="p-5 pb-0 text-blue-500"><a href="/login">Login</a></p>
       </form>
     </div>
   );
